@@ -41,7 +41,7 @@ const Slider = () => {
 
   return (
     <div id="gallery">
-      <h1 className="text-center p-4">Gallery</h1>
+      <h1 className="text-center p-1">Slider</h1>
 
       <div className="position-relative d-flex justify-content-center">
         {slides.map((slide, index) => (
@@ -54,8 +54,10 @@ const Slider = () => {
               onClick={previuosSlide}
               size={30}
             />
-          
-            {index === current && <img src={slide.image} alt="eaach img" className="img-fluid" />}
+
+            {index === current && (
+              <img src={slide.image} alt="eaach img" className="img-fluid" />
+            )}
             <FaArrowAltCircleRight
               className="text-light opacity-75  position-absolute top-50 end-0 translate-middle-y"
               onClick={nextSlide}
